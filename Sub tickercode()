@@ -1,6 +1,5 @@
-Attribute VB_Name = "Module1"
 Sub tickercode()
-CallColors
+
 
 ' set parameters for looping code through workbook
 '-------------------------------------------------------------------------
@@ -86,20 +85,20 @@ OpenPrice = ws.Cells(2, 3).Value
         ' -----------------------------------------------------------------
             If percent_change < 0 Then
             
-                ws.Range("L" & summary_table_row).Interior.Color = Red
+                ws.Range("L" & summary_table_row).Interior.Color = RGB(255, 0, 0)
                 
             Else
             
-                ws.Range("L" & summary_table_row).Interior.Color = Green
+                ws.Range("L" & summary_table_row).Interior.Color = RGB(0, 128, 0)
             End If
             
             If yearly_change < 0 Then
             
-                ws.Range("K" & summary_table_row).Interior.Color = Red
+                ws.Range("K" & summary_table_row).Interior.Color = RGB(255, 0, 0)
                 
             Else
             
-                ws.Range("K" & summary_table_row).Interior.Color = Green
+                ws.Range("K" & summary_table_row).Interior.Color = RGB(0, 128, 0)
             End If
         
         ' progress the summary table down another row for next set of values
